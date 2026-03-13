@@ -1,0 +1,14 @@
+# robots.txt for geocities.com/Athens/Parthenon/7831/
+# archived from geocities backup, october 2009
+# original file date: 11/14/1997
+
+User-agent: *
+Disallow: /p7.html
+Disallow: /basement.html
+Disallow: /home.html
+Disallow: /404.html
+
+# why did the site owner block these specific pages from search engines?
+# these pages are not linked from any other page on the site.
+# they were added to robots.txt on 11/14/1997 - the last day
+# the account holder was seen alive.

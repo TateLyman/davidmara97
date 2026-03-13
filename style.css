@@ -1,0 +1,365 @@
+/* ========================================
+   ~*~ DaViD's PaGe ~*~
+   Central High School History Project
+   Last updated: November 14, 1997
+   ======================================== */
+
+body {
+    background-color: #000000;
+    color: #00ff00;
+    font-family: "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' fill='%23001100'/%3E%3C/svg%3E");
+}
+
+/* The main content table */
+td {
+    vertical-align: top;
+}
+
+a:link {
+    color: #ffff00;
+}
+
+a:visited {
+    color: #cc9900;
+}
+
+a:hover {
+    color: #ff0000;
+}
+
+.page-title {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 28px;
+    color: #ff00ff;
+    text-align: center;
+    text-shadow: 2px 2px #330033;
+}
+
+.subtitle {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 14px;
+    color: #00ffff;
+    text-align: center;
+}
+
+.nav-cell {
+    background-color: #000033;
+    border: 2px inset #333366;
+    padding: 8px;
+    width: 160px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 12px;
+}
+
+.nav-cell a {
+    display: block;
+    padding: 3px 0;
+    color: #ffff00;
+    text-decoration: none;
+}
+
+.nav-cell a:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+
+.nav-header {
+    color: #ff00ff;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 1px solid #333366;
+    padding-bottom: 4px;
+    margin-bottom: 6px;
+}
+
+.content-cell {
+    background-color: #000011;
+    border: 2px inset #333366;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.hit-counter {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    color: #999999;
+    text-align: center;
+    padding: 10px;
+}
+
+.hit-counter span {
+    background-color: #111111;
+    border: 1px inset #333333;
+    padding: 2px 6px;
+    font-family: "Courier New", monospace;
+    color: #00ff00;
+    letter-spacing: 3px;
+}
+
+.webring {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 10px;
+    color: #999999;
+    text-align: center;
+    border: 1px solid #333333;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #0a0a0a;
+}
+
+.divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #000000, #00ff00, #000000);
+    margin: 10px 0;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% { opacity: 0; }
+}
+
+.marquee-text {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.marquee-text span {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+    color: #ff0000;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 12px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Under construction */
+.construction {
+    text-align: center;
+    padding: 10px;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: #ffff00;
+    font-size: 12px;
+}
+
+/* Journal entries */
+.journal-entry {
+    border: 1px solid #003300;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #000800;
+}
+
+.journal-date {
+    color: #00ffff;
+    font-weight: bold;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+}
+
+.journal-text {
+    color: #00ff00;
+    font-family: "Times New Roman", serif;
+    font-size: 14px;
+    padding-top: 6px;
+}
+
+/* Corrupted / glitch styles for later pages */
+.corrupted {
+    position: relative;
+}
+
+.corrupted::before {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    top: 0;
+    color: #ff0000;
+    clip-path: inset(0 0 60% 0);
+    animation: glitch1 2s infinite linear alternate-reverse;
+}
+
+.corrupted::after {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    top: 0;
+    color: #0000ff;
+    clip-path: inset(40% 0 0 0);
+    animation: glitch2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch1 {
+    0% { clip-path: inset(0 0 85% 0); }
+    20% { clip-path: inset(30% 0 50% 0); }
+    40% { clip-path: inset(60% 0 10% 0); }
+    60% { clip-path: inset(10% 0 70% 0); }
+    80% { clip-path: inset(80% 0 0 0); }
+    100% { clip-path: inset(0 0 85% 0); }
+}
+
+@keyframes glitch2 {
+    0% { clip-path: inset(50% 0 20% 0); }
+    25% { clip-path: inset(0 0 60% 0); }
+    50% { clip-path: inset(70% 0 0 0); }
+    75% { clip-path: inset(20% 0 40% 0); }
+    100% { clip-path: inset(50% 0 20% 0); }
+}
+
+/* Distorted image placeholder */
+.photo-frame {
+    border: 3px ridge #666666;
+    padding: 4px;
+    background-color: #111111;
+    display: inline-block;
+    margin: 8px;
+}
+
+.photo-placeholder {
+    width: 200px;
+    height: 150px;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    font-size: 11px;
+    font-family: "Courier New", monospace;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-placeholder.distorted {
+    filter: contrast(2) brightness(0.4);
+    background: repeating-linear-gradient(
+        0deg,
+        #0a0a0a,
+        #0a0a0a 2px,
+        #1a0000 2px,
+        #1a0000 4px
+    );
+}
+
+.photo-placeholder.distorted::after {
+    content: "IMAGE CORRUPTED";
+    position: absolute;
+    color: #330000;
+    font-size: 9px;
+}
+
+/* Guestbook */
+.guestbook-entry {
+    border: 1px dotted #003300;
+    padding: 8px;
+    margin: 8px 0;
+    background-color: #000500;
+}
+
+.gb-name {
+    color: #ff00ff;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.gb-date {
+    color: #666666;
+    font-size: 10px;
+    font-family: "Courier New", monospace;
+}
+
+.gb-message {
+    color: #00cc00;
+    font-size: 13px;
+    padding-top: 4px;
+}
+
+/* Hidden text - same color as background */
+.hidden-text {
+    color: #000000;
+    user-select: all;
+}
+
+/* The "basement" page styles */
+.warning-text {
+    color: #ff0000;
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.static-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.1) 2px,
+        rgba(0,0,0,0.1) 4px
+    );
+    z-index: 1000;
+    opacity: 0.3;
+}
+
+/* Scrambled text effect */
+.scrambled {
+    font-family: "Courier New", monospace;
+    color: #ff0000;
+    letter-spacing: -1px;
+    word-spacing: -3px;
+    opacity: 0.8;
+}
+
+/* Footer */
+.footer {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 10px;
+    color: #666666;
+    text-align: center;
+    padding: 15px;
+    border-top: 1px solid #003300;
+    margin-top: 20px;
+}
+
+.email-link {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+}
+
+/* Last entry styles */
+.last-entry {
+    background-color: #0a0000;
+    border: 1px solid #330000;
+    color: #cc0000;
+}
+
+.last-entry .journal-date {
+    color: #ff0000;
+}
+
+.last-entry .journal-text {
+    color: #cc0000;
+    font-family: "Courier New", monospace;
+}
